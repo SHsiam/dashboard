@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Bootstrap Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include custom CSS for styling -->
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-card {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-card-title {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+
+        .form-card-title h4 {
+            margin: 0;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            width: 100%;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #007BFF;
+        }
+
+        .file-upload-label {
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 8px 12px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .file-upload-label:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-submit {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card form-card">
+                    <div class="form-card-title">
+                        <h4>Personal Information</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="name">Name:</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gender">Gender:</label>
+                                        <select class="form-control" id="gender" required>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dob">Date of Birth:</label>
+                                        <input type="date" class="form-control" id="dob" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone:</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="address">Address:</label>
+                                        <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="passport">Passport:</label>
+                                        <input type="text" class="form-control" id="passport" placeholder="Enter your passport number" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="expired-passport">Expired Passport Date:</label>
+                                        <input type="date" class="form-control" id="expired-passport" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="national-id">National ID Card Number:</label>
+                                        <input type="text" class="form-control" id="national-id" placeholder="Enter your national ID card number" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="upload-passport">Upload Passport Copy:</label>
+                                        <input type="file" class="form-control-file" id="upload-passport" accept=".jpg, .jpeg, .png" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="upload-visa">Upload Visa:</label>
+                                        <input type="file" class="form-control-file" id="upload-visa" accept=".jpg, .jpeg, .png" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="upload-image">Image</label>
+                                        <input type="file" class="form-control-file" id="upload-image" accept=".jpg, .jpeg, .png" required>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-submit btn-block">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery for file upload -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
